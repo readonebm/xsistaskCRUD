@@ -1,0 +1,41 @@
+﻿@model IEnumerable<mhsApp1.Models.NilaiMhss>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="text-left">
+    <h2>Data Penilaian Mahasiswa</h2>
+    <a class="btn btn-primary mb-5"  asp-controller="Dosen" asp-action="Create">Create</a> 
+    <table class="table table-bordered">
+        <thead class="bg-light">
+            <tr>
+                @*<th scope="col" class="col-1">No</th>*@
+                <th scope="col">Nama</th>
+                <th scope="col">Mata Kuliah</th>
+                <th scope="col">Nilai</th>
+                <th scope="col" class="col-3">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="align-middle">
+                    @*<th scope="row">@i.Id</th>*@
+                    <td>@item.NameMhs</td>
+                    <td>@item.Matkul</td>
+                    <td>@item.Nilai</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <a type="button" class="btn btn-success" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            <a type="button" class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <button type="button" class="btn btn-danger" asp-action="Delete" asp-route="@item.Id">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

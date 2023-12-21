@@ -1,0 +1,25 @@
+﻿@model mhsApp1.Models.NilaiMhss
+
+<h2 class="mb-3">Edit Data Nilai Mahasiswa</h2>
+
+<div>
+    <form method="post" asp-action="Edit">
+        <div class="mb-3">
+            <label for="nameMhs" class="form-label">Nama Mahasiswa</label>
+            <input type="text" class="form-control" id="nameMhs" placeholder="@Model.NameMhs">
+        </div>
+         <div class="mb-3">
+                <label for="matkul" class="form-label">Mata Kuliah</label>
+                <input type="text" class="form-control" id="matkul" placeholder="@Model.Matkul">
+            </div>
+            <div class="mb-3">
+                <label for="nilai" class="form-label">Nilai</label>
+                <input type="number" class="form-control" id="nilai" placeholder="@Model.Nilai">
+            </div>
+            <div class="mb-3">
+                <label for="catatan" class="form-label">Catatan</label>
+                <input type="text" class="form-control" id="catatan" placeholder="@Model.Catatan">
+            </div> 
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,25 @@
+﻿@model mhsApp1.Models.NilaiMhss
+
+<h2 class="mb-3">Add Nilai Mahasiswa</h2>
+
+<div>
+    <form method="post" asp-action="Create">
+        <div class="mb-3">
+            <label for="nameMhs" class="form-label">Nama Mahasiswa</label>
+            <input type="text" class="form-control" id="nameMhs" asp-for="NameMhs">
+        </div>
+         <div class="mb-3">
+                <label for="matkul" class="form-label">Mata Kuliah</label>
+                <input type="text" class="form-control" id="matkul" asp-for="Matkul">
+            </div>
+            <div class="mb-3">
+                <label for="nilai" class="form-label">Nilai</label>
+                <input type="number" class="form-control" id="nilai" asp-for="Nilai">
+            </div>
+            <div class="mb-3">
+                <label for="catatan" class="form-label">Catatan</label>
+                <input type="text" class="form-control" id="catatan" asp-for="Catatan">
+            </div> 
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
